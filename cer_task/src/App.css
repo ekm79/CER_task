@@ -14,18 +14,15 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffff;
 }
 
-.card {
-  border-radius: 1rem;
-}
 .card-body {
   padding: 20px;
 }
 
 .sidebar {
-  color: white;
+  color: #ffffff;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -35,10 +32,15 @@
 .toggle {
   color: white;
   padding: 15px;
-  background-color: blue;
+  background-color: #15559a;
   width: 250px;
   height: 50px;
   border-radius: 45px;
+}
+
+.form-check-input:checked {
+  background-color: #eeebeb;
+  border-color:#eeebeb
 }
 
 @keyframes App-logo-spin {

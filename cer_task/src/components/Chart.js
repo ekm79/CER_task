@@ -3,8 +3,7 @@ import {Card, CardBody} from 'reactstrap'
 import {vessels, allData} from '../data';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-
-const Chart = () => {
+const Chart = (props) => {
     return (
         <Card>
             <CardBody>
@@ -14,9 +13,10 @@ const Chart = () => {
                    <YAxis domain={['dataMin', 'auto']}/>
                    <Tooltip />
                    <Legend />
-                   {vessels.map((s) => (
-                     <Line dataKey={s.name} type="monotone" data={allData.TEMP} name={s.name} key={s.name} stroke={s.color}/>
-                   ))}
+                   {vessels.map((s) => 
+                       {return props.state[s.id] ?
+                     <Line dataKey={s.name} type="monotone" data={allData.TEMP} name={s.name} key={s.name} stroke={s.color} />:null}
+                   )}
                 </LineChart>
             </CardBody>
         </Card>

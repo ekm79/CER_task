@@ -2,16 +2,19 @@
 export const vessels = [
     {
         name: "Vessel 1",
+        id: "vessel_1",
         displayed: true,
         color: "gray"
     },
     {
         name: "Vessel 2",
+        id: "vessel_2",
         displayed: true,
         color: "#2D77A6"
     },
     {
         name: "Vessel 3",
+        id: "vessel_3",
         displayed: true,
         color: "#a89748"
     }
